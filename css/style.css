@@ -62,60 +62,140 @@ body { width: 100%;}
 * * Attribute Selectors
 ******************************************************/
 
+/**global style
+*/
+
 body {
-	font-family: beirut, "serif";
+	font-family: monospace,"courier new";
 }
 
+section {
+	padding: 2.75rem;
+}
+
+/** Header
+ */
 header {
-	color: lawngreen;
-	background-color: darkgray;
-	font-size: 1.35rem;
+	color: lime;
+	background-color: #333;
 }
 
-h1 {
-	text-decoration-color: lawngreen;
+header h1 {
 	display: inline-block;
 	margin-right: 2rem;
+	font-size: 2.5rem;
 }
 
-image {
+/** welcome image
+*/
+
+img[alt="Welcome To My Home Page"]{
 	display: block;
 	margin: 0 auto 2rem;
-	width: 300px;
-	align-content: center;
 }
 
 .instructions-wrapper {
-	border-style: solid;
-	border-color: black;
-	size: 250px;
+	display: flex;
+	align-items: flex-start;
+	border: 3px solid black;
+	padding: 20px;
 }
 
-.instructions-wrapper ,image {
-	display: inline-block;
-	size: 150px;
+.instructions-wrapper img {
+	width: 260px;
 }
+
+.instructions-content {
+	flex: 1;
+	padding-right: 2rem;
+}
+
+.instructions-content h2{
+	margin-top: 0;
+}
+/** About me section
+ */
 
 section.about-me {
-	color: blue;
+	color: #ffffff;
 	background-color: blue;
 }
 
-.about-me image {
+.about-me img {
 	width: 300px;
 	float: left;
+	margin-right: 2rem;
+	border: solid white;
 }
+
+.about-me span {
+	color: yellow;
+	font-style: italic;
+}
+
+/** skills
+ */
+
+section:nth-child(4) h2 {
+	text-align: right;
+	margin-top: 0;
+}
+
+section:nth-child(4) table{
+	width: 100%;
+	color: lime;
+}
+
+section:nth-child(4) table td,
+section:nth-child(4) table th {
+	background-color: #333;
+	padding: 10px;
+	text-align: left;
+}
+
+/** contact form
+ */
+
+div.sfooter-content section:last-child{
+	background-color: white;
+}
+
 
 .form-wrapper {
 	background-color: darkgreen;
 	color: lime;
-	padding: 15px;
-	border: darkgray;
-	align-content: center;
+	padding: 20px;
 }
 
-table, th, td {
-	border: 1px black;
-	color: lawngreen;
+label{
+	display: block;
+	margin: 15px 0 5px ;
+}
+
+input, textarea {
+	width: 30%;
+	padding: 8px;
+}
+
+button{
+	background-color: lime;
+	font-weight: bold;
+	border: none;
+	padding: 10px 31px;
+	font-size: 1rem;
+}
+
+form div:nth-child(4){
+	margin-bottom: 15px;
+}
+
+.form-wrapper h2{
+	margin-top: 0;
+}
+
+/** footer
+ */
+footer{
 	background-color: black;
+	color: white;
 }
